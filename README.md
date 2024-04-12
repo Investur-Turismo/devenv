@@ -9,4 +9,5 @@ Ambiente de teste e desenvolvimento para nosso tema WordPress
 task init # Cria os containers e networks
 task start # Inicializa os containers
 task stop # Fecha os containers
+task down # Remove todos os containers relacionados a esse projeto
 ```
