@@ -1,0 +1,19 @@
+version: '3'
+
+vars:
+  MAIN_COMPOSE: "{{.ROOT_DIR}}/compose.yml"
+  COMPOSE_PROGRAM: docker-compose
+
+tasks:
+  init:
+    cmds:
+      - "{{.COMPOSE_PROGRAM}} up -f {{.MAIN_COMPOSE}} {{.CLI_ARGS}}"
+  start:
+    cmds:
+      - "{{.COMPOSE_PROGRAM}} -f {{.MAIN_COMPOSE}} start {{.CLI_ARGS}}"
+  stop:
+    cmds:
+      - "{{.COMPOSE_PROGRAM}} -f {{.MAIN_COMPOSE}} stop {{.CLI_ARGS}}"
+  down:
+    cmds:
+      - "{{.COMPOSE_PROGRAM}} -f {{.MAIN_COMPOSE}} down --rmi all -v {{.CLI_ARGS}}"
