@@ -7,7 +7,7 @@ vars:
 tasks:
   init:
     cmds:
-      - "{{.COMPOSE_PROGRAM}} up -f {{.MAIN_COMPOSE}} {{.CLI_ARGS}}"
+      - "{{.COMPOSE_PROGRAM}} -f {{.MAIN_COMPOSE}} up {{.CLI_ARGS}}"
   start:
     cmds:
       - "{{.COMPOSE_PROGRAM}} -f {{.MAIN_COMPOSE}} start {{.CLI_ARGS}}"
