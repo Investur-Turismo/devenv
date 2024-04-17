@@ -2,7 +2,7 @@ version: '3'
 
 vars:
   MAIN_COMPOSE: "{{.ROOT_DIR}}/compose.yml"
-  COMPOSE_PROGRAM: docker-compose
+  COMPOSE_PROGRAM: podman-compose
 
 tasks:
   init:
